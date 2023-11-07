@@ -2,10 +2,18 @@
 import Social from '../components/Social.astro';
 ---
 
-<footer class="bg-neutral-800">
-    <p>Site developed by <a href="https://www.evelazquez.dev/" target="_blank">Elias Velazquez</a></p>
+<footer class="bg-neutral-900 text-center flex flex-col md:flex-row justify-between p-2">
 
-    <Social platform="twitter" username="astrodotbuild" />
-    <Social platform="github" username="withastro" />
-    <Social platform="youtube" username="astrodotbuild" />
+    <div class="mt-2 mb-2 md:mb-0">
+        <i class="fas fa-copyright text-xs me-1"></i>
+        <span>RJ8 2023</span>
+    </div>
+
+    <div class="mb-2 md:mb-0">
+        <Social platform="youtube" username="@rj8mp" iconClasses="fa-brands fa-youtube me-2 text-lg" />
+        <Social platform="instagram" username="rj8covers" iconClasses="fa-brands fa-instagram me-2 text-lg" />
+        <Social platform="facebook" username="RJ8Covers" iconClasses="fa-brands fa-facebook me-2 text-lg" />
+    </div>
+
+    <p class="mb-2 md:mb-0">Web designed by <a href="https://www.evelazquez.dev/" target="_blank">Elias Velazquez</a></p>
 </footer>

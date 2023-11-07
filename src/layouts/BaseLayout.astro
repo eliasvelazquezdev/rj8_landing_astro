@@ -4,15 +4,24 @@ import Footer from '../components/Footer.astro';
 const {pageTitle} = Astro.props;
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<!-- Font Awesome -->
+		<script src="https://kit.fontawesome.com/8ddddc79a5.js" crossorigin="anonymous"></script>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,700&display=swap');
+
+			body{
+				font-family: 'Roboto Mono', monospace;
+			}
+		</style>
 		<title>{pageTitle} - RJ8</title>
 	</head>
- 	<body class="bg-zinc-700 text-slate-100">
+ 	<body class=" text-slate-100">
 		<Header />
 
 

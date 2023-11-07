@@ -4,14 +4,43 @@ const pageTitle = "Home";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <div class="container mx-auto text-center">
-        <img src="https://res.cloudinary.com/daokfcdfm/image/upload/v1699326892/rj8_landing/RJ8_23_CircleFrame_fjt95a.png" alt="rj8's logo">
-        <h1>Welcome to my site!</h1>
+    <div class="mx-auto text-center">
+        <article id="welcome" class="bg-zinc-800 p-2">
+            <img class="mx-auto block w-96" src="https://res.cloudinary.com/daokfcdfm/image/upload/v1699326892/rj8_landing/RJ8_23_CircleFrame_fjt95a.png" alt="rj8's logo">
 
-        <p>Hey there! I'm RJ8, a musician based on Buenos Aires, Argentina. I love vintage music mostly made with synths and drum machines. I make covers and instrumental recreations of my favorite songs and post/play them on YouTube.</p>
+            <h2 class="text-2xl font-bold mb-3 bg-gradient-to-r from-yellow-500 via-red-500 to-orange-600 inline-block text-transparent bg-clip-text">
+                Welcome to my site!
+            </h2>
 
-        <p>On this site you can find access to all my social media and latest YouTube videos, find out what I'm working on, my upcoming content and more!</p>
-            
-        <p>Feel free to contact me through the form below or my social media and don't forget to take a peek on my Depeche Mode live concert recreations in the projects section.</p>
+            <div class="md:w-2/3 mx-auto">
+                <p class="mb-3">Hey there! I'm RJ8, a musician based on Buenos Aires, Argentina. I love vintage music mostly made with synths and drum machines. I make covers and instrumental recreations of my favorite songs and post/play them on YouTube.</p>
+                <p class="mb-3">On this site you can find access to all my social media and latest YouTube videos, find out what I'm working on, my upcoming content and more!</p>
+                
+                <p class="mb-3">Feel free to contact me through the form below or my social media and don't forget to take a peek on my Depeche Mode live concert recreations in the projects section.</p>
+            </div>
+        </article>
+
+
+        <article id="latest-videos" class="bg-zinc-700 p-2">
+            <h2 class="text-2xl font-bold mb-3 bg-gradient-to-r from-yellow-500 via-red-500 to-orange-600 inline-block text-transparent bg-clip-text">
+                What's new on my channel
+            </h2>
+
+            <div class="grid md:grid-cols-12 gap-4 mx-auto">
+                <div class="col-span-6">
+                    <h3 class="text-xl font-bold mb-3">
+                        My latest video
+                    </h3>
+                     <iframe class="mx-auto rounded-md" src="https://www.youtube.com/embed/Zqri5LWmYNI?si=SCvL1-l_PylTJjiM" frameborder="0"></iframe>
+                </div>
+
+                <div class="col-span-6">
+                    <h3 class="text-xl font-bold mb-3">
+                        My latest live show
+                    </h3>
+                     <iframe class="mx-auto rounded-md" src="https://www.youtube.com/embed/Fv84C11skS4?si=LMJSlkHdZuqYPXeV" frameborder="0"></iframe>
+                </div>
+            </div>
+        </article>
     </div>
 </BaseLayout>

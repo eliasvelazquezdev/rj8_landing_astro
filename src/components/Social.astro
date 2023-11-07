@@ -1,6 +1,5 @@
 ---
-const { platform, username } = Astro.props;
+const { platform, username, iconClasses } = Astro.props;
 ---
-<div>
-    <a href={`https://www.${platform}.com/${username}`}>{platform}</a>
-</div>
+
+<a href={`https://www.${platform}.com/${username}`} target="_blank"><i class={`${iconClasses}`}></i></a>
