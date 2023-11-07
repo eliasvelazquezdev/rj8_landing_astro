@@ -1,16 +1,17 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Home";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+    <div class="container mx-auto text-center">
+        <img src="https://res.cloudinary.com/daokfcdfm/image/upload/v1699326892/rj8_landing/RJ8_23_CircleFrame_fjt95a.png" alt="rj8's logo">
+        <h1>Welcome to my site!</h1>
+
+        <p>Hey there! I'm RJ8, a musician based on Buenos Aires, Argentina. I love vintage music mostly made with synths and drum machines. I make covers and instrumental recreations of my favorite songs and post/play them on YouTube.</p>
+
+        <p>On this site you can find access to all my social media and latest YouTube videos, find out what I'm working on, my upcoming content and more!</p>
+            
+        <p>Feel free to contact me through the form below or my social media and don't forget to take a peek on my Depeche Mode live concert recreations in the projects section.</p>
+    </div>
+</BaseLayout>
