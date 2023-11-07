@@ -5,7 +5,7 @@ const pageTitle = "Home";
 
 <BaseLayout pageTitle={pageTitle}>
     <div class="mx-auto text-center">
-        <article id="welcome" class="bg-zinc-800 p-2">
+        <article id="welcome" class="bg-zinc-800 p-2 lg:p-6">
             <img class="mx-auto block w-96" src="https://res.cloudinary.com/daokfcdfm/image/upload/v1699326892/rj8_landing/RJ8_23_CircleFrame_fjt95a.png" alt="rj8's logo">
 
             <h2 class="text-2xl font-bold mb-3 bg-gradient-to-r from-yellow-500 via-red-500 to-orange-600 inline-block text-transparent bg-clip-text">
@@ -21,7 +21,7 @@ const pageTitle = "Home";
         </article>
 
 
-        <article id="latest-videos" class="bg-zinc-700 p-2">
+        <article id="latest-videos" class="bg-zinc-700 p-2 lg:p-6">
             <h2 class="text-2xl font-bold mb-3 bg-gradient-to-r from-yellow-500 via-red-500 to-orange-600 inline-block text-transparent bg-clip-text">
                 What's new on my channel
             </h2>
@@ -31,14 +31,53 @@ const pageTitle = "Home";
                     <h3 class="text-xl font-bold mb-3">
                         My latest video
                     </h3>
-                     <iframe class="mx-auto rounded-md" src="https://www.youtube.com/embed/Zqri5LWmYNI?si=SCvL1-l_PylTJjiM" frameborder="0"></iframe>
+                     <iframe class="mx-auto rounded-md w-full aspect-video" src="https://www.youtube.com/embed/Zqri5LWmYNI?si=SCvL1-l_PylTJjiM" frameborder="0"></iframe>
                 </div>
 
                 <div class="col-span-6">
                     <h3 class="text-xl font-bold mb-3">
                         My latest live show
                     </h3>
-                     <iframe class="mx-auto rounded-md" src="https://www.youtube.com/embed/Fv84C11skS4?si=LMJSlkHdZuqYPXeV" frameborder="0"></iframe>
+                     <iframe class="mx-auto rounded-md w-full aspect-video" src="https://www.youtube.com/embed/Fv84C11skS4?si=LMJSlkHdZuqYPXeV" frameborder="0"></iframe>
+                </div>
+            </div>
+        </article>
+
+        <article id="home-cards" class="bg-zinc-800 p-2 lg:p-6 mx-auto" >
+            <div class="grid md:grid-cols-3 gap-2">
+                <div class="flex items-center justify-center h-full">
+                    <div class="max-w-md rounded-lg overflow-hidden shadow-lg">
+                      <img class="w-full h-40 object-cover object-center hover:scale-110 hover:transition ease-in-out" src="https://res.cloudinary.com/daokfcdfm/image/upload/v1699399600/rj8_landing/What_I_m_up_to_bz5o9r.jpg" alt="Image">
+
+                      <div class="p-4 h-72 bg-yellow-600/75">
+                        <h2 class="mb-3 text-xl font-bold">What I'm up to</h2>
+                        <p class="mb-3">Currently working on the next entry of the "A fans tribute" series. Should I spoil the surprise? Want a hint? Let me know!</p>
+                        <p class="mb-3">I also have plans on making tutorials again. Maybe show how to play a song note by note.</p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center h-full">
+                    <div class="max-w-md rounded-lg overflow-hidden shadow-lg">
+                      <img class="w-full h-40 object-cover object-center hover:scale-110 hover:transition ease-in-out" src="https://res.cloudinary.com/daokfcdfm/image/upload/v1699399598/rj8_landing/Donations_b4y6lr.jpg" alt="Image">
+
+                      <div class="p-4 h-72 bg-red-800/75">
+                        <h2 class="mb-3 text-xl font-bold">Donations</h2>
+                        <p class="mb-3">If you enjoy what I do, please consider supporting my content with a donation via PayPal. Any amount will be very much appreciated!</p>
+                        <p class="mb-3">You can send your donation by clicking this <a href="https://www.paypal.me/kanirj8" target="_blank" class="hover:text-red-400">link</a></p>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-center h-full">
+                    <div class="max-w-md rounded-lg overflow-hidden shadow-lg">
+                      <img class="w-full h-40 object-cover object-center hover:scale-110 hover:transition ease-in-out" src="https://res.cloudinary.com/daokfcdfm/image/upload/v1699399599/rj8_landing/Calendar_eaogkp.jpg" alt="Image">
+
+                      <div class="p-4 h-72 bg-orange-600/75">
+                        <h2 class="mb-3 text-xl font-bold">Calendar</h2>
+                        <p class="mb-3">Next live show: Sunday, November 12th, 4PM (GMT -3)</p>
+                      </div>
+                    </div>
                 </div>
             </div>
         </article>
