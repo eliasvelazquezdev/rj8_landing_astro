@@ -2,11 +2,12 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Carousel from '../components/Carousel.astro';
 import Social from '../components/Social.astro';
+import AlbumCover from '../components/AlbumCover.astro';
 const pageTitle = "World Violation Tour";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <div class="sm:ml-64 text-center">
+    <div class="sm:ml-64 p-3 md:p-0 bg-neutral-800">
 
         <Carousel 
             carouselItem1="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465206/rj8_landing/WVTAFT/Carousel_1_bch5ft.png"
@@ -15,7 +16,68 @@ const pageTitle = "World Violation Tour";
             carouselItem4="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465206/rj8_landing/WVTAFT/Carousel_4_qubgif.png"
         />
 
+        <section id="wvtaft_intro" class="p-2 lg:p-6">
+            <AlbumCover
+                albumCover="https://res.cloudinary.com/daokfcdfm/image/upload/v1699468507/rj8_landing/WVTAFT/WVT_Album_Cover_b0tkv9.png"
+                albumTitle="World Violation Tour - A fans tribute"
+                albumDescription="First entry of the 'A fans tribute' series"
+                releaseDate="Release date: August 11th, 2023"
+                gumroadLink="https://rj8covers.gumroad.com/l/wvtaft"
+            
+            />
 
+            <article>
+                <h2 class="text-lg font-bold mb-3">
+                    Project description
+                </h2>
+                <div class="md:w-2/3">
+                    <p class="mb-3">The "World Violation Tour - A fans tribute" brings you an exceptional lineup of passionate musicians, ready to deliver an extraordinary tribute to the band that has inspired generations: Depeche Mode.</p>
+                    <p class="mb-3">Since we don't have a proper official release of this iconic tour, an enthusiast group of fans got together to recreate the whole concert in high quality audio, with concert crowd effects and even vocals in every song!</p>
+                
+                    <p class="mb-3">Immerse yourself in the pulsating rhythms, the soul-stirring lyrics, and the infectious energy that define Depeche Mode's unparalleled legacy.</p>
+
+                    <p class="mb-3">Get ready for an amazing experience. Made by fans, for the fans. 🌹🎤🎸🎹</p>
+                </div>
+            </article>
+
+            <hr class="mt-5 mb-5">
+
+            <article>
+                <h2 class="text-lg font-bold mb-3">
+                    Background
+                </h2>
+                <div class="md:w-2/3">
+                    <p class="mb-3">As a dedicated Depeche Mode fan (having spent half my life listening to their music), I have often pondered why the tour that supported what many consider to be the band's best album, <em>Violator</em>, still lacks an official recording or DVD release. Why on Earth is that? This question remains unanswered and as time goes by there is no indication that an official release of the World Violation Tour will ever materialize.</p>
+
+                    <p class="mb-3">With that nagging question haunting me through the years, I realized that fans deserved something better than the soundboard recordings currently available. With my skills and connections, I decided to take a chance and bring my idea to life. I shared my plan with some friends and in August 2021, I began working on the project. After seven months of hard work, the <strong>World Violation Tour Remastered</strong> was born and released on March 20th, 2022.</p>
+                
+                    <p class="mb-3">During a live broadcast on YouTube, I shared the project with my community and the response was overwhelming. Despite some negative critics, which are to be expected, many fans were captivated and amazed by it. Some even believed that they were listening to a real Depeche Mode performance from some concert recording.</p>
+
+                    <p class="mb-3">After those events and after releasing the <a href="/bctaft/" target="_blank"/>Black Celebration Tour - A fans tribute</a> project, I decided I could do better. I gathered my crew once again for advice and some help. We got to work together (a new member was added to the team) and voila! The magic happened again.</p>
+
+                    <p class="mb-3">With a better mix and even new sounds, we achieved our goal. Our biggest project ever released got a new life under a new name: <em>World Violation Tour - A fans tribute</em>.</p>
+
+                    <p class="mb-3">I want to thank all of the fans who supported this project from the beginning or gave it a chance. Your support made this project possible. If you're intrigued by it, consider <a href="https://rj8covers.gumroad.com/l/wvtaft" target="_blank" class="">getting a copy</a> to support the creators.</p>
+
+                    <p class="mb-3">This is the <span class="font-bold">WORLD VIOLATION TOUR - A FANS TRIBUTE</span>. Get ready to have an amazing experience, made by fans, for the fans.</p>
+                </div>
+            </article>
+        </section>
+
+        <hr class="mt-5 mb-5">
+
+        <section id="wvtaft_team" class="p-2 lg:p-6">
+            
+            <h2 class="text-lg font-bold mb-3">
+                The team
+            </h2>
+            <div class="md:w-2/3">
+                <p class="mb-3">You've read <em>'A fans tribute'</em> more than once by now. So, it's time to know the people that made this possible! If you like this project, consider supporting the fans behind it by following their social media / subscribing to their YouTube channels.</p>
+            </div>
+
+            
+
+        </section>
     </div>
 
 

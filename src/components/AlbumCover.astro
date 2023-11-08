@@ -1,0 +1,20 @@
+---
+const {albumCover, albumTitle, albumDescription, releaseDate, gumroadLink} = Astro.props;
+---
+
+<div class="flex flex-col md:flex-row text-center md:text-start mb-5 ">
+    <img src={albumCover} class="block mx-auto md:inline md:mx-0 w-48 md:me-4" alt="World Violation Tour - A fans tribute album cover">
+
+    <div>
+        <h2 class="text-2xl font-bold mb-3">
+            {albumTitle}
+        </h2>
+        <p class="mb-2">{albumDescription}</p>
+        <p class="mb-2">{releaseDate}</p>
+
+        <a class="flex justify-center py-2 px-4 border rounded-md shadow-sm text-md font-medium bg-gradient-to-r  from-yellow-500 via-red-500 to-orange-600" href={gumroadLink} data-gumroad-overlay-checkout="true" target="_blank">Get your copy on Gumroad</a>
+    </div>
+
+    <hr class="mt-5">
+</div>
+
