@@ -1,6 +1,4 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
 import Sidebar from '../components/Sidebar.astro';
 const {pageTitle} = Astro.props;
 ---
@@ -28,9 +26,7 @@ const {pageTitle} = Astro.props;
 
 		<slot />
 		
-		<!-- <script>
-			import "../scripts/menu.js";
-		</script> -->
+
 		<!-- Flowbite JS -->
 		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
 	</body>

@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Carousel from '../components/Carousel.astro';
+import Social from '../components/Social.astro';
+const pageTitle = "World Violation Tour";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <div class="sm:ml-64 text-center">
+
+        <Carousel 
+            carouselItem1="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465206/rj8_landing/WVTAFT/Carousel_1_bch5ft.png"
+            carouselItem2="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465206/rj8_landing/WVTAFT/Carousel_2_damx5e.png"
+            carouselItem3="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465206/rj8_landing/WVTAFT/Carousel_3_ffrbgb.png"
+            carouselItem4="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465206/rj8_landing/WVTAFT/Carousel_4_qubgif.png"
+        />
+
+
+    </div>
+
+
+</BaseLayout>
