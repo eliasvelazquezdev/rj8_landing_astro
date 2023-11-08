@@ -1,0 +1,21 @@
+---
+import Social from "./Social.astro";
+const {memberName, memberPhoto, memberRole, memberDescription} = Astro.props;
+---
+<div class="flex flex-col md:flex-row">
+    
+    <img class="w-60 h-60 md:w-96 md:me-3 mb-3 md:mb-0 block mx-auto md:inline-block " src={memberPhoto} alt="">
+
+    
+    <div>
+        <h2 class="text-lg font-bold mb-1">
+            {memberName}
+        </h2>
+        
+        <p class="mb-3 font-light">{memberRole}</p>
+        
+        <slot name="social-media-1" />
+
+        <Fragment set:html={memberDescription}>
+    </div>
+</div>

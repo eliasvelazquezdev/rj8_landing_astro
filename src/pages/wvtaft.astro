@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Carousel from '../components/Carousel.astro';
-import Social from '../components/Social.astro';
 import AlbumCover from '../components/AlbumCover.astro';
+import ProjectMember from '../components/ProjectMember.astro';
+import Social from '../components/Social.astro';
 const pageTitle = "World Violation Tour";
 ---
 
@@ -71,9 +72,19 @@ const pageTitle = "World Violation Tour";
             <h2 class="text-lg font-bold mb-3">
                 The team
             </h2>
-            <div class="md:w-2/3">
+            <div class="md:w-2/3 mb-5">
                 <p class="mb-3">You've read <em>'A fans tribute'</em> more than once by now. So, it's time to know the people that made this possible! If you like this project, consider supporting the fans behind it by following their social media / subscribing to their YouTube channels.</p>
             </div>
+
+            <ProjectMember 
+                memberPhoto="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465230/rj8_landing/WVTAFT/Claudio_oj08hq.png"
+                memberName="Claudio Blanco"
+                memberRole="Vocals (Dave Gahan / Martin Gore) | Crowd Effects"
+                memberDescription="<p class='md:w-2/4 mb-3' >The <em>World Violation Tour - A fans tribute</em> captured the hearts of many fans. However, some may have wondered whether we had extracted the vocals from the soundboards available on the internet. But why settle for second best when we could do it the old-fashioned way? Instead, we opted to take a more authentic approach, enlisting the talents of an exceptional singer to record the vocals for the project.</p> <p class='md:w-2/4 mb-3'>Enter Claudio Blanco, one of the most gifted vocalists I have had the privilege of knowing. With remarkable skill and precision, he masterfully recreated the performances of Dave Gahan and Martin Gore, breathing new life into their legendary stage performances. Furthermore, Claudio's contribution extended beyond just the vocal tracks, as he also played a crucial role in emulating the sound of the crowd singing in some of the songs, lending an added layer of authenticity to the project.</p>"
+            >
+                
+                <Social platform="youtube" username="@rj8mp" iconClasses="fa-brands fa-youtube me-2 text-3xl mb-2" slot="social-media-1" />
+            </Project>
 
             
 
