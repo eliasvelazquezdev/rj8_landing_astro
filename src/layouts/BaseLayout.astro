@@ -1,6 +1,7 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import Sidebar from '../components/Sidebar.astro';
 const {pageTitle} = Astro.props;
 ---
 <!DOCTYPE html>
@@ -21,17 +22,16 @@ const {pageTitle} = Astro.props;
 		</style>
 		<title>{pageTitle} - RJ8</title>
 	</head>
- 	<body class=" text-slate-100">
-		<Header />
+ 	<body class="bg-zinc-950 text-slate-100">
+		<Sidebar />
 
 
 		<slot />
-
-
-		<Footer />
-
-		<script>
+		
+		<!-- <script>
 			import "../scripts/menu.js";
-		</script>
+		</script> -->
+		<!-- Flowbite JS -->
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
 	</body>
 </html>
