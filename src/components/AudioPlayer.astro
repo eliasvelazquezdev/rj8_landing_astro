@@ -1,0 +1,7 @@
+---
+const {songTitle, audioURL} = Astro.props;
+---
+<div>
+    <h5 class="font-bold text-md mb-2">{songTitle}</h5>
+    <iframe src={`${audioURL}/preview`} width="640" height="480" allow="autoplay"></iframe>
+</div>

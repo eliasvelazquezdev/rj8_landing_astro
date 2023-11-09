@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Carousel from '../components/Carousel.astro';
 import AlbumCover from '../components/AlbumCover.astro';
 import ProjectMember from '../components/ProjectMember.astro';
+import AudioPlayer from '../components/AudioPlayer.astro'
 import Social from '../components/Social.astro';
 const pageTitle = "World Violation Tour";
 ---
@@ -60,22 +61,25 @@ const pageTitle = "World Violation Tour";
 
                     <p class="mb-3">I want to thank all of the fans who supported this project from the beginning or gave it a chance. Your support made this project possible. If you're intrigued by it, consider <a href="https://rj8covers.gumroad.com/l/wvtaft" target="_blank" class="">getting a copy</a> to support the creators.</p>
 
-                    <p class="mb-3">This is the <span class="font-bold">WORLD VIOLATION TOUR - A FANS TRIBUTE</span>. Get ready to have an amazing experience, made by fans, for the fans.</p>
+                    <p>This is the <span class="font-bold">WORLD VIOLATION TOUR - A FANS TRIBUTE</span>. Get ready to have an amazing experience, made by fans, for the fans.</p>
                 </div>
             </article>
         </section>
 
-        <hr class="mt-5 mb-5">
-
+        
+        <!-- The team -->
         <section id="wvtaft_team" class="p-2 lg:p-6">
-            
+            <hr class="mb-5">
+
             <h2 class="text-lg font-bold mb-3">
                 The team
             </h2>
+
             <div class="md:w-2/3 mb-5">
-                <p class="mb-3">You've read <em>'A fans tribute'</em> more than once by now. So, it's time to know the people that made this possible! If you like this project, consider supporting the fans behind it by following their social media / subscribing to their YouTube channels.</p>
+                <p class="mb-3">You've read <em>'A fans tribute'</em> more than once by now. So, it's time to know the people that made this possible! If you like this project, consider supporting the fans behind it by subscribing to their YouTube channels.</p>
             </div>
 
+            <!-- Claudio -->
             <ProjectMember 
                 memberPhoto="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465230/rj8_landing/WVTAFT/Claudio_oj08hq.png"
                 memberName="Claudio Blanco"
@@ -83,10 +87,57 @@ const pageTitle = "World Violation Tour";
                 memberDescription="<p class='md:w-2/4 mb-3' >The <em>World Violation Tour - A fans tribute</em> captured the hearts of many fans. However, some may have wondered whether we had extracted the vocals from the soundboards available on the internet. But why settle for second best when we could do it the old-fashioned way? Instead, we opted to take a more authentic approach, enlisting the talents of an exceptional singer to record the vocals for the project.</p> <p class='md:w-2/4 mb-3'>Enter Claudio Blanco, one of the most gifted vocalists I have had the privilege of knowing. With remarkable skill and precision, he masterfully recreated the performances of Dave Gahan and Martin Gore, breathing new life into their legendary stage performances. Furthermore, Claudio's contribution extended beyond just the vocal tracks, as he also played a crucial role in emulating the sound of the crowd singing in some of the songs, lending an added layer of authenticity to the project.</p>"
             >
                 
-                <Social platform="youtube" username="@rj8mp" iconClasses="fa-brands fa-youtube me-2 text-3xl mb-2" slot="social-media-1" />
+                <Social platform="youtube" username="@perihelion54" iconClasses="fa-brands fa-youtube me-2 text-3xl mb-2 text-red-600 " slot="youtube-channel" />
+            </Project>
+            
+            <!-- Rai -->
+            <ProjectMember 
+                memberPhoto="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465230/rj8_landing/WVTAFT/Rai_uwpuqe.png"
+                memberName="Raimundo Ladrón de Guevara"
+                memberRole="Guitar (Enjoy The Silence / Personal Jesus)"
+                memberDescription="<p class='md:w-2/4 mb-3' >Raimundo, a dear and talented friend of mine, possesses an awe-inspiring gift for graphic design and music.</p> <p class='md:w-2/4 mb-3'>His musical prowess was on full display as he recorded the guitar tracks for the iconic songs <em>Enjoy The Silence</em> and <em>Personal Jesus</em>. He also provided invaluable insights for the production of the backing tracks, elevating the project to new heights of sonic excellence.</p>"
+            >
+                
+                <Social platform="youtube" username="@RaimundoLadrondeGuevara" iconClasses="fa-brands fa-youtube me-2 text-3xl mb-2 text-red-600 " slot="youtube-channel" />
             </Project>
 
-            
+            <!-- Teddy -->
+            <ProjectMember 
+                memberPhoto="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465231/rj8_landing/WVTAFT/Teddy_nb6dl5.png"
+                memberName="Teddy Ferguson"
+                memberRole="Guitar (I Want You Now / Here Is The House / World Full Of Nothing / Sweetest Perfection / Behind The Wheel / Route 66)"
+                memberDescription="<p class='md:w-2/4 mb-3' >This talented musician and singer from Arkansas started posting comments on my YouTube channel. Later he started asking for my covers, so he could make renditions of his favorite DM songs for his YouTube channel.</p> <p class='md:w-2/4 mb-3'>And now he's not only a good friend of mine, but also a crucial part of this project. Teddy displayed his musical talent by recording the acoustic songs of the concert and Behind The Wheel / Route 66 guitar tracks.</p>"
+            >
+                
+                <Social platform="youtube" username="@TedGahan01" iconClasses="fa-brands fa-youtube me-2 text-3xl mb-2 text-red-600 " slot="youtube-channel" />
+            </Project>
+
+            <!-- Elias -->
+            <ProjectMember 
+                memberPhoto="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465230/rj8_landing/WVTAFT/RJ8_wrqyao.png"
+                memberName="Elias Velazquez"
+                memberRole="Synths | Programming | Backing tracks | Crowd effects | Visuals"
+                memberDescription="<p class='md:w-2/4 mb-3' >It's my turn now. I go by Elias (or Kani for some close friends), but you might recognize me as RJ8. The journey of working on this project has brought me immense joy. I dedicated myself tirelessly each day to reach this point, and I owe a great deal of gratitude to my companions Claudio, Raimundo, and Teddy. Their help and insight was indispensable in making this project a reality.</p> <p class='md:w-2/4 mb-3'>My role revolved around crafting the backing tracks and the files that contained every soundbank that allowed me to play the songs on every live broadcast of the project on my YouTube channel. Additionally, I played a crucial role in replicating the crowd effects, capturing the authentic reactions akin to those of an actual concert audience.</p>"
+            >
+                
+                <Social platform="youtube" username="@rj8mp" iconClasses="fa-brands fa-youtube me-2 text-3xl mb-2 text-red-600 " slot="youtube-channel" />
+            </Project>
+        </section>
+
+        <!-- Excerpts -->
+        <section id="wvtwaft-audio" class="p-2 lg:p-6">
+            <hr class="mb-5">
+            <h2 class="text-lg font-bold mb-3">
+                Excerpts
+            </h2>
+
+            <div class="md:w-2/3 mb-5">
+                <p class="mb-3">You can listen to excerpts of every song that is included in the digital release of the project by clicking the "play" buttons.</p>
+            </div>
+
+            <AudioPlayer songTitle="00 - Kaleid" audioURL="https://drive.google.com/file/d/1Py_G0xU0P0Pyo6T4UNqJOKi1zVHlwnx4/view?usp=sharing" />
+
+
 
         </section>
     </div>
