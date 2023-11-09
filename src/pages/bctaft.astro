@@ -1,0 +1,230 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Carousel from '../components/Carousel.astro';
+import AlbumCover from '../components/AlbumCover.astro';
+import ProjectSection from '../components/ProjectSection.astro';
+import ProjectMember from '../components/ProjectMember.astro';
+import AudioPlayer from '../components/AudioPlayer.astro'
+import Social from '../components/Social.astro';
+
+const pageTitle = "Black Celebration Tour";
+
+const carouselItems = [
+    "https://res.cloudinary.com/daokfcdfm/image/upload/v1699557085/rj8_landing/BCTAFT/Carousel_1_slfpbn.png",
+    "https://res.cloudinary.com/daokfcdfm/image/upload/v1699557085/rj8_landing/BCTAFT/Carousel_2_shvndw.png",
+    "https://res.cloudinary.com/daokfcdfm/image/upload/v1699557085/rj8_landing/BCTAFT/Carousel_3_jdbd5m.png",
+    "https://res.cloudinary.com/daokfcdfm/image/upload/v1699557085/rj8_landing/BCTAFT/Carousel_4_ukuyca.png",
+    "https://res.cloudinary.com/daokfcdfm/image/upload/v1699557085/rj8_landing/BCTAFT/Carousel_5_asxopm.png",
+    "https://res.cloudinary.com/daokfcdfm/image/upload/v1699557086/rj8_landing/BCTAFT/Carousel_6_vvtdrr.png"
+]   
+
+const carouselIndicators = ["0", "1", "2", "3", "4", "5"];
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <div class="sm:ml-64 p-3 md:p-0 bg-gray-900">
+        <Carousel 
+            carouselItems={carouselItems}
+            carouselIndicators={carouselIndicators}
+        />
+
+        <section id="bctaft_intro" class="p-2 lg:p-6">
+            <AlbumCover
+                albumCover="https://res.cloudinary.com/daokfcdfm/image/upload/v1699557084/rj8_landing/BCTAFT/bct_aft_cover_bqv4x8.png"
+                albumTitle="Black Celebration Tour - A fans tribute"
+                albumDescription="Second entry of the 'A fans tribute' series"
+                releaseDate="Release date: May 21th, 2023"
+                gumroadLink="https://rj8covers.gumroad.com/l/bctaft"
+            
+            />
+
+            <article>
+                <h2 class="text-2xl font-bold mb-3">
+                    Project description
+                </h2>
+                <div class="lg:w-2/3">
+                    <p class="mb-3">Get ready to dive into the ultimate Depeche Mode experience, crafted by the passionate fan team who brought you the mind-blowing <a href="/wvtaft/" class="underline underline-offset-8" target="_blank">World Violation Tour - A fans tribute</a> project!</p>
+
+                    <p class="mb-3">On the 37th anniversary of a legendary era for the band, brace yourself to relive the magic of the Black Celebration Tour in a way you've never experienced before.</p>
+                
+                    <p class="mb-3">Feel the energy of the crowd and become a part of the action as you immerse yourself in the recreated setlist, packed with all your favorite hits and meticulously crafted with an unparalleled attention to detail. This isn't just a show, it's an experience. Made by fans, for the fans. 🏴 🎤 🎹 </p>
+                </div>
+            </article>
+        </section>
+
+        
+        <!-- The team -->
+        <ProjectSection sectionID="bctaft_team" sectionTitle="The team">
+            <div class="lg:w-2/3 mb-5" slot="sectionDescription">
+                <p class="mb-3">This project is a labor of love that started on May, 2022. After a year of hard work is finally here for your musical enjoyment.</p>
+                
+                <p class="mb-3">Know the fans behind it and consider supporting them by subscribing to their YouTube channels.</p>
+            </div>
+
+            <div class="lg:w-2/3" slot="sectionContent">
+                <!-- Claudio -->
+                <ProjectMember
+                    memberID="claudio"
+                    memberPhoto="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465230/rj8_landing/WVTAFT/Claudio_oj08hq.png"
+                    memberName="Claudio Blanco"
+                    memberRole="Vocals (Dave Gahan / Martin Gore)"
+                    memberDescription="<p class=' mb-3' >After the amazing job he did for the World Violation Tour Remastered, Claudio recorded every single vocal for this project.</p> <p class=' mb-3'>His performances have the power to transport listeners to a place where emotions intertwine, where nostalgia meets the present, and where the extraordinary becomes familiar. Claudio's vocals have the ability to elevate any audio project to new heights, leaving a lasting impression on all who have the pleasure of experiencing his artistry.</p> <p class=' mb-3'>Without his contribution, this project wouldn't be the same or possible at all.</p>"
+                >
+                
+                    <Social platform="youtube" username="@perihelion54" iconClasses="fa-brands fa-youtube me-2 text-3xl mb-2 text-red-600 " slot="youtube-channel" />
+                </ProjectMember>
+                
+                <!-- Elias -->
+                <ProjectMember
+                    memberPhoto="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465230/rj8_landing/WVTAFT/RJ8_wrqyao.png"
+                    memberName="Elias Velazquez"
+                    memberRole="Synths | Programming | Backing tracks | Crowd effects | Graphic design"
+                    memberDescription="<p class='mb-3' >Once again, working on a project as big as this one is such a phenomenal experience. With its highs and lows, I enjoyed developing every aspect of it. From synths to backing tracks, programming to crowd effects, and visuals to graphic design, this truly was a thrilling adventure.</p> <p class='mb-3'>With each task, I always try to bring a sprinkle of familiarity and a dash of entertainment to ensure that every project I work on leaves a lasting impression on all who experience it.</p> <p class='mb-3'>Thank you for your incredible support and for giving this project a chance.</p>"
+                >
+                
+                    <Social platform="youtube" username="@rj8mp" iconClasses="fa-brands fa-youtube me-2 text-3xl mb-2 text-red-600 " slot="youtube-channel" />
+                </ProjectMember>
+            </div>
+        </ProjectSection>
+
+        <!-- Excerpts -->
+        <ProjectSection sectionID="bctaft-audio" sectionTitle="Excerpts">
+            <div class="lg:w-2/3 mb-5" slot="sectionDescription">
+                <p class="mb-3">You can listen to excerpts of every song that is included in the digital release of the project by clicking the "play" buttons.</p>
+            </div>
+
+            <div slot="sectionContent">
+                <AudioPlayer
+                    songTitle="00 - Kaleid"
+                    audioURL="https://drive.google.com/file/d/1Py_G0xU0P0Pyo6T4UNqJOKi1zVHlwnx4"
+                />
+                <AudioPlayer
+                    songTitle="01 - World In My Eyes"
+                    audioURL="https://drive.google.com/file/d/1OdhMisk7YLtQbLiWqGAMfBdKLu1uXU4p"
+                />
+                <AudioPlayer
+                    songTitle="02 - Halo"
+                    audioURL="https://drive.google.com/file/d/1Zn10W_k8IxAY9pekFHQ1iYvyZsynrJiJ"
+                />
+                <AudioPlayer
+                    songTitle="03 - Shake The Disease"
+                    audioURL="https://drive.google.com/file/d/1hdvOtIwUCGUBWAjMgR6M08YvOTbjwNUS"
+                />
+                <AudioPlayer
+                    songTitle="04 - Everything Counts"
+                    audioURL="https://drive.google.com/file/d/1NrcvYgUJ6TSLyNJp3HBDAo5cCLcVgZXM"
+                />
+                <AudioPlayer
+                    songTitle="05 - Master And Servant"
+                    audioURL="https://drive.google.com/file/d/1rvg8V7W-zVYraazKDh4C6gun6c353S83"
+                />
+                <AudioPlayer
+                    songTitle="06 - Never Let Me Down Again"
+                    audioURL="https://drive.google.com/file/d/1u7KAXAK-SsiClEz0UU_lQlCJfRNTPbM2"
+                />
+                <AudioPlayer
+                    songTitle="07 - Waiting For The Night"
+                    audioURL="https://drive.google.com/file/d/1w1KJUfgd0gSnycfjEjF2M9oo5-jAt_rB"
+                />
+                <AudioPlayer
+                    songTitle="08 - I Want You Now"
+                    audioURL="https://drive.google.com/file/d/18BgREKoH1H_8T2F1J7s2bYX0iyVqQWbI"
+                />
+                <AudioPlayer
+                    songTitle="09 - World Full Of Nothing"
+                    audioURL="https://drive.google.com/file/d/1_2xnR6CMCIKv0ZxUKyzn-oxj7Swu7PtU"
+                />
+                <AudioPlayer
+                    songTitle="10 - Clean"
+                    audioURL="https://drive.google.com/file/d/1vHDZ7GNf5MDeJObd6sqTQ1vOBg2MtA-B"
+                />
+                <AudioPlayer
+                    songTitle="11 - Stripped"
+                    audioURL="https://drive.google.com/file/d/1ZIpoRrhJdbVdmSdV0Ra2d4vA1zFJ35qh"
+                />
+                <AudioPlayer
+                    songTitle="12 - Policy Of Truth"
+                    audioURL="https://drive.google.com/file/d/12Zu6aqASm5BJHGWXoLBq31f3bzVaWcqw"
+                />
+                <AudioPlayer
+                    songTitle="13 - Enjoy The Silence"
+                    audioURL="https://drive.google.com/file/d/1A0e53DJgTstueNSXJUryFylmDewiW2fd"
+                />
+                <AudioPlayer
+                    songTitle="14 - Strangelove"
+                    audioURL="https://drive.google.com/file/d/1o0CyyFjYezKki4E4PT4PUF3ANbqtkltn"
+                />
+                <AudioPlayer
+                    songTitle="15 - Personal Jesus"
+                    audioURL="https://drive.google.com/file/d/1rn4W7qmKm-vnCA8Bqdfr-R8mwyU6WVWp"
+                />
+                <AudioPlayer
+                    songTitle="16 - Black Celebration"
+                    audioURL="https://drive.google.com/file/d/1yhfIB-G3cs_lhiFgCvogpBV37ZY7UNpb"
+                />
+                <AudioPlayer
+                    songTitle="17 - A Question Of Time"
+                    audioURL="https://drive.google.com/file/d/1jasACOgOfz2j-toNgOsLm1ssAPnO1r5C"
+                />
+                <AudioPlayer
+                    songTitle="18 - Behind The Wheel"
+                    audioURL="https://drive.google.com/file/d/1vN92uyEX42sBjVn1WxPVjpXHG-ialS4R"
+                />
+                <AudioPlayer
+                    songTitle="19 - Route 66"
+                    audioURL="https://drive.google.com/file/d/1jrV22Aozxz3LXRin_no_0hacvJgPO91P"
+                />
+            </div>
+        </ProjectSection>
+
+        <!-- Videos -->
+        <ProjectSection id="bctaft-videos" sectionTitle="Videos">
+            <div class="lg:w-2/3 mb-5" slot="sectionDescription">
+                <p class="mb-3">Some of the videos related to this project that were posted on my YouTube channel. Stay tuned as I'll post more in the future!</p>
+            </div>
+
+            <div slot="sectionContent">
+                <div class="grid lg:grid-cols-12 gap-4 mx-auto">
+                    <div class="col-span-3">
+                        <iframe class="mx-auto rounded-md w-full aspect-video" src="https://www.youtube.com/embed/_RmksuG1FQA?si=gZoJCk58Dyt3BbkY" frameborder="0"></iframe>
+                        <h3 class="font-thin mb-3">
+                            Digital release announcement
+                        </h3>
+                    </div>
+    
+                    <div class="col-span-3">
+                        <iframe class="mx-auto rounded-md w-full aspect-video" src="https://www.youtube.com/embed/cYDlY-26q9I?si=ztg60jQY11kv-ktk" frameborder="0"></iframe>
+                        <p class="font-thin mb-3">
+                            A Question Of Time
+                        </p>
+                    </div>
+
+                    <div class="col-span-3">
+                        <iframe class="mx-auto rounded-md w-full aspect-video" src="https://www.youtube.com/embed/qlboV1jGQjY?si=ldOZEEfGYqLHwqCb" frameborder="0"></iframe>
+                        <p class="font-thin mb-3">
+                            Fly On The Windscreen
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </ProjectSection>
+
+        <!-- FAQ -->
+        <ProjectSection id="bctaft-faq" sectionTitle="FAQ">
+            <div class="lg:w-2/3" slot="sectionContent">
+                <h3 class="text-lg mb-3 font-light">¿What's the Black Celebration tour project?</h3>
+                <p class="mb-10">The "Black Celebration Tour - A fans tribute" is a fan project that recreates the iconic Black Celebration gig performed by Depeche Mode at Wembley Arena, London, on April 16th, 1986. The goal is that you feel you're listening to an official and high quality live recording of that night.</p>
+
+                <h3 class="text-lg mb-3 font-light">So, it's not Depeche Mode then.</h3>
+                <p class="mb-10">No, you're not listening to any audience or soundboard recording. Everything was recreated from scratch. Original samples were used to recreate most of the synth lines, melodies and backing tracks.</p>
+                
+                <h3 class="text-lg mb-3 font-light">¿Were the vocals extracted/isolated from a sounboard?</h3>
+                <p class="mb-10">Believe it or not, the vocals you hear on every recording related to this project were recorded by the same singer that lend his artistic skills to the World Violation Tour - A fans tribute: Claudio Blanco. No, it's not Dave.</p>
+
+                <h3 class="text-lg mb-3 font-light">¿Is there a video version of this?</h3>
+                <p class="mb-3">The premiere of this project was broadcasted on April 23th and a replay had place on May 14th, 2023, both on my YouTube channel. Unfortunately, both performances got blocked due to copyright issues.</p>
+                <p class="mb-10">If you're interested in a video version of the whole concert, please let me know through the homepage contact form.</p>
+            </div>
+        </ProjectSection>
+    </div>
+</BaseLayout>
