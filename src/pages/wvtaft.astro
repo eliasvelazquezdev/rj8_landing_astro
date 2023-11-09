@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Carousel from '../components/Carousel.astro';
 import AlbumCover from '../components/AlbumCover.astro';
+import ProjectSection from '../components/ProjectSection.astro';
 import ProjectMember from '../components/ProjectMember.astro';
 import AudioPlayer from '../components/AudioPlayer.astro'
 import Social from '../components/Social.astro';
@@ -29,7 +30,7 @@ const pageTitle = "World Violation Tour";
             />
 
             <article>
-                <h2 class="text-lg font-bold mb-3">
+                <h2 class="text-2xl font-bold mb-3">
                     Project description
                 </h2>
                 <div class="md:w-2/3">
@@ -45,7 +46,7 @@ const pageTitle = "World Violation Tour";
             <hr class="mt-5 mb-5">
 
             <article>
-                <h2 class="text-lg font-bold mb-3">
+                <h2 class="text-2xl font-bold mb-3">
                     Background
                 </h2>
                 <div class="md:w-2/3">
@@ -68,78 +69,173 @@ const pageTitle = "World Violation Tour";
 
         
         <!-- The team -->
-        <section id="wvtaft_team" class="p-2 lg:p-6">
-            <hr class="mb-5">
+        <ProjectSection sectionID="wvtaft_team" sectionTitle="The team">
+            
 
-            <h2 class="text-lg font-bold mb-3">
-                The team
-            </h2>
-
-            <div class="md:w-2/3 mb-5">
+            <div class="md:w-2/3 mb-5" slot="sectionDescription">
                 <p class="mb-3">You've read <em>'A fans tribute'</em> more than once by now. So, it's time to know the people that made this possible! If you like this project, consider supporting the fans behind it by subscribing to their YouTube channels.</p>
             </div>
 
-            <!-- Claudio -->
-            <ProjectMember 
-                memberPhoto="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465230/rj8_landing/WVTAFT/Claudio_oj08hq.png"
-                memberName="Claudio Blanco"
-                memberRole="Vocals (Dave Gahan / Martin Gore) | Crowd Effects"
-                memberDescription="<p class='md:w-2/4 mb-3' >The <em>World Violation Tour - A fans tribute</em> captured the hearts of many fans. However, some may have wondered whether we had extracted the vocals from the soundboards available on the internet. But why settle for second best when we could do it the old-fashioned way? Instead, we opted to take a more authentic approach, enlisting the talents of an exceptional singer to record the vocals for the project.</p> <p class='md:w-2/4 mb-3'>Enter Claudio Blanco, one of the most gifted vocalists I have had the privilege of knowing. With remarkable skill and precision, he masterfully recreated the performances of Dave Gahan and Martin Gore, breathing new life into their legendary stage performances. Furthermore, Claudio's contribution extended beyond just the vocal tracks, as he also played a crucial role in emulating the sound of the crowd singing in some of the songs, lending an added layer of authenticity to the project.</p>"
-            >
+            <div class="md:w-2/3" slot="sectionContent">
+                <!-- Claudio -->
+                <ProjectMember
+                    memberID="claudio"
+                    memberPhoto="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465230/rj8_landing/WVTAFT/Claudio_oj08hq.png"
+                    memberName="Claudio Blanco"
+                    memberRole="Vocals (Dave Gahan / Martin Gore) | Crowd Effects"
+                    memberDescription="<p class=' mb-3' >The <em>World Violation Tour - A fans tribute</em> captured the hearts of many fans. However, some may have wondered whether we had extracted the vocals from the soundboards available on the internet. But why settle for second best when we could do it the old-fashioned way? Instead, we opted to take a more authentic approach, enlisting the talents of an exceptional singer to record the vocals for the project.</p> <p class=' mb-3'>Enter Claudio Blanco, one of the most gifted vocalists I have had the privilege of knowing. With remarkable skill and precision, he masterfully recreated the performances of Dave Gahan and Martin Gore, breathing new life into their legendary stage performances. Furthermore, Claudio's contribution extended beyond just the vocal tracks, as he also played a crucial role in emulating the sound of the crowd singing in some of the songs, lending an added layer of authenticity to the project.</p>"
+                >
                 
-                <Social platform="youtube" username="@perihelion54" iconClasses="fa-brands fa-youtube me-2 text-3xl mb-2 text-red-600 " slot="youtube-channel" />
-            </Project>
-            
-            <!-- Rai -->
-            <ProjectMember 
-                memberPhoto="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465230/rj8_landing/WVTAFT/Rai_uwpuqe.png"
-                memberName="Raimundo Ladrón de Guevara"
-                memberRole="Guitar (Enjoy The Silence / Personal Jesus)"
-                memberDescription="<p class='md:w-2/4 mb-3' >Raimundo, a dear and talented friend of mine, possesses an awe-inspiring gift for graphic design and music.</p> <p class='md:w-2/4 mb-3'>His musical prowess was on full display as he recorded the guitar tracks for the iconic songs <em>Enjoy The Silence</em> and <em>Personal Jesus</em>. He also provided invaluable insights for the production of the backing tracks, elevating the project to new heights of sonic excellence.</p>"
-            >
+                    <Social platform="youtube" username="@perihelion54" iconClasses="fa-brands fa-youtube me-2 text-3xl mb-2 text-red-600 " slot="youtube-channel" />
+                </ProjectMember>
                 
-                <Social platform="youtube" username="@RaimundoLadrondeGuevara" iconClasses="fa-brands fa-youtube me-2 text-3xl mb-2 text-red-600 " slot="youtube-channel" />
-            </Project>
-
-            <!-- Teddy -->
-            <ProjectMember 
-                memberPhoto="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465231/rj8_landing/WVTAFT/Teddy_nb6dl5.png"
-                memberName="Teddy Ferguson"
-                memberRole="Guitar (I Want You Now / Here Is The House / World Full Of Nothing / Sweetest Perfection / Behind The Wheel / Route 66)"
-                memberDescription="<p class='md:w-2/4 mb-3' >This talented musician and singer from Arkansas started posting comments on my YouTube channel. Later he started asking for my covers, so he could make renditions of his favorite DM songs for his YouTube channel.</p> <p class='md:w-2/4 mb-3'>And now he's not only a good friend of mine, but also a crucial part of this project. Teddy displayed his musical talent by recording the acoustic songs of the concert and Behind The Wheel / Route 66 guitar tracks.</p>"
-            >
+                <!-- Rai -->
+                <ProjectMember
+                    memberPhoto="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465230/rj8_landing/WVTAFT/Rai_uwpuqe.png"
+                    memberName="Raimundo Ladrón de Guevara"
+                    memberRole="Guitar (Enjoy The Silence / Personal Jesus)"
+                    memberDescription="<p class='mb-3' >Raimundo, a dear and talented friend of mine, possesses an awe-inspiring gift for graphic design and music.</p> <p class='mb-3'>His musical prowess was on full display as he recorded the guitar tracks for the iconic songs <em>Enjoy The Silence</em> and <em>Personal Jesus</em>. He also provided invaluable insights for the production of the backing tracks, elevating the project to new heights of sonic excellence.</p>"
+                >
                 
-                <Social platform="youtube" username="@TedGahan01" iconClasses="fa-brands fa-youtube me-2 text-3xl mb-2 text-red-600 " slot="youtube-channel" />
-            </Project>
-
-            <!-- Elias -->
-            <ProjectMember 
-                memberPhoto="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465230/rj8_landing/WVTAFT/RJ8_wrqyao.png"
-                memberName="Elias Velazquez"
-                memberRole="Synths | Programming | Backing tracks | Crowd effects | Visuals"
-                memberDescription="<p class='md:w-2/4 mb-3' >It's my turn now. I go by Elias (or Kani for some close friends), but you might recognize me as RJ8. The journey of working on this project has brought me immense joy. I dedicated myself tirelessly each day to reach this point, and I owe a great deal of gratitude to my companions Claudio, Raimundo, and Teddy. Their help and insight was indispensable in making this project a reality.</p> <p class='md:w-2/4 mb-3'>My role revolved around crafting the backing tracks and the files that contained every soundbank that allowed me to play the songs on every live broadcast of the project on my YouTube channel. Additionally, I played a crucial role in replicating the crowd effects, capturing the authentic reactions akin to those of an actual concert audience.</p>"
-            >
+                    <Social platform="youtube" username="@RaimundoLadrondeGuevara" iconClasses="fa-brands fa-youtube me-2 text-3xl mb-2 text-red-600 " slot="youtube-channel" />
+                </ProjectMember>
+                <!-- Teddy -->
+                <ProjectMember
+                    memberPhoto="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465231/rj8_landing/WVTAFT/Teddy_nb6dl5.png"
+                    memberName="Teddy Ferguson"
+                    memberRole="Guitar (I Want You Now / Here Is The House / World Full Of Nothing / Sweetest Perfection / Behind The Wheel / Route 66)"
+                    memberDescription="<p class='mb-3' >This talented musician and singer from Arkansas started posting comments on my YouTube channel. Later he started asking for my covers, so he could make renditions of his favorite DM songs for his YouTube channel.</p> <p class='mb-3'>And now he's not only a good friend of mine, but also a crucial part of this project. Teddy displayed his musical talent by recording the acoustic songs of the concert and Behind The Wheel / Route 66 guitar tracks.</p>"
+                >
                 
-                <Social platform="youtube" username="@rj8mp" iconClasses="fa-brands fa-youtube me-2 text-3xl mb-2 text-red-600 " slot="youtube-channel" />
-            </Project>
-        </section>
+                    <Social platform="youtube" username="@TedGahan01" iconClasses="fa-brands fa-youtube me-2 text-3xl mb-2 text-red-600 " slot="youtube-channel" />
+                </ProjectMember>
+                <!-- Elias -->
+                <ProjectMember
+                    memberPhoto="https://res.cloudinary.com/daokfcdfm/image/upload/v1699465230/rj8_landing/WVTAFT/RJ8_wrqyao.png"
+                    memberName="Elias Velazquez"
+                    memberRole="Synths | Programming | Backing tracks | Crowd effects | Visuals"
+                    memberDescription="<p class='mb-3' >It's my turn now. I go by Elias (or Kani for some close friends), but you might recognize me as RJ8. The journey of working on this project has brought me immense joy. I dedicated myself tirelessly each day to reach this point, and I owe a great deal of gratitude to my companions Claudio, Raimundo, and Teddy. Their help and insight was indispensable in making this project a reality.</p> <p class='mb-3'>My role revolved around crafting the backing tracks and the files that contained every soundbank that allowed me to play the songs on every live broadcast of the project on my YouTube channel. Additionally, I played a crucial role in replicating the crowd effects, capturing the authentic reactions akin to those of an actual concert audience.</p>"
+                >
+                
+                    <Social platform="youtube" username="@rj8mp" iconClasses="fa-brands fa-youtube me-2 text-3xl mb-2 text-red-600 " slot="youtube-channel" />
+                </ProjectMember>
+            </div>
+        </ProjectSection>
 
         <!-- Excerpts -->
-        <section id="wvtwaft-audio" class="p-2 lg:p-6">
-            <hr class="mb-5">
-            <h2 class="text-lg font-bold mb-3">
-                Excerpts
-            </h2>
-
-            <div class="md:w-2/3 mb-5">
+        <ProjectSection sectionID="wvtwaft-audio" sectionTitle="Excerpts">
+            <div class="md:w-2/3 mb-5" slot="sectionDescription">
                 <p class="mb-3">You can listen to excerpts of every song that is included in the digital release of the project by clicking the "play" buttons.</p>
             </div>
 
-            <AudioPlayer songTitle="00 - Kaleid" audioURL="https://drive.google.com/file/d/1Py_G0xU0P0Pyo6T4UNqJOKi1zVHlwnx4/view?usp=sharing" />
+            <div slot="sectionContent">
+                <AudioPlayer
+                    songTitle="00 - Kaleid"
+                    audioURL="https://drive.google.com/file/d/1Py_G0xU0P0Pyo6T4UNqJOKi1zVHlwnx4"
+                />
+                <AudioPlayer
+                    songTitle="01 - World In My Eyes"
+                    audioURL="https://drive.google.com/file/d/1OdhMisk7YLtQbLiWqGAMfBdKLu1uXU4p"
+                />
+                <AudioPlayer
+                    songTitle="02 - Halo"
+                    audioURL="https://drive.google.com/file/d/1Zn10W_k8IxAY9pekFHQ1iYvyZsynrJiJ"
+                />
+                <AudioPlayer
+                    songTitle="03 - Shake The Disease"
+                    audioURL="https://drive.google.com/file/d/1hdvOtIwUCGUBWAjMgR6M08YvOTbjwNUS"
+                />
+                <AudioPlayer
+                    songTitle="04 - Everything Counts"
+                    audioURL="https://drive.google.com/file/d/1NrcvYgUJ6TSLyNJp3HBDAo5cCLcVgZXM"
+                />
+                <AudioPlayer
+                    songTitle="05 - Master And Servant"
+                    audioURL="https://drive.google.com/file/d/1rvg8V7W-zVYraazKDh4C6gun6c353S83"
+                />
+                <AudioPlayer
+                    songTitle="06 - Never Let Me Down Again"
+                    audioURL="https://drive.google.com/file/d/1u7KAXAK-SsiClEz0UU_lQlCJfRNTPbM2"
+                />
+                <AudioPlayer
+                    songTitle="07 - Waiting For The Night"
+                    audioURL="https://drive.google.com/file/d/1w1KJUfgd0gSnycfjEjF2M9oo5-jAt_rB"
+                />
+                <AudioPlayer
+                    songTitle="08 - I Want You Now"
+                    audioURL="https://drive.google.com/file/d/18BgREKoH1H_8T2F1J7s2bYX0iyVqQWbI"
+                />
+                <AudioPlayer
+                    songTitle="09 - World Full Of Nothing"
+                    audioURL="https://drive.google.com/file/d/1_2xnR6CMCIKv0ZxUKyzn-oxj7Swu7PtU"
+                />
+                <AudioPlayer
+                    songTitle="10 - Clean"
+                    audioURL="https://drive.google.com/file/d/1vHDZ7GNf5MDeJObd6sqTQ1vOBg2MtA-B"
+                />
+                <AudioPlayer
+                    songTitle="11 - Stripped"
+                    audioURL="https://drive.google.com/file/d/1ZIpoRrhJdbVdmSdV0Ra2d4vA1zFJ35qh"
+                />
+                <AudioPlayer
+                    songTitle="12 - Policy Of Truth"
+                    audioURL="https://drive.google.com/file/d/12Zu6aqASm5BJHGWXoLBq31f3bzVaWcqw"
+                />
+                <AudioPlayer
+                    songTitle="13 - Enjoy The Silence"
+                    audioURL="https://drive.google.com/file/d/1A0e53DJgTstueNSXJUryFylmDewiW2fd"
+                />
+                <AudioPlayer
+                    songTitle="14 - Strangelove"
+                    audioURL="https://drive.google.com/file/d/1o0CyyFjYezKki4E4PT4PUF3ANbqtkltn"
+                />
+                <AudioPlayer
+                    songTitle="15 - Personal Jesus"
+                    audioURL="https://drive.google.com/file/d/1rn4W7qmKm-vnCA8Bqdfr-R8mwyU6WVWp"
+                />
+                <AudioPlayer
+                    songTitle="16 - Black Celebration"
+                    audioURL="https://drive.google.com/file/d/1yhfIB-G3cs_lhiFgCvogpBV37ZY7UNpb"
+                />
+                <AudioPlayer
+                    songTitle="17 - A Question Of Time"
+                    audioURL="https://drive.google.com/file/d/1jasACOgOfz2j-toNgOsLm1ssAPnO1r5C"
+                />
+                <AudioPlayer
+                    songTitle="18 - Behind The Wheel"
+                    audioURL="https://drive.google.com/file/d/1vN92uyEX42sBjVn1WxPVjpXHG-ialS4R"
+                />
+                <AudioPlayer
+                    songTitle="19 - Route 66"
+                    audioURL="https://drive.google.com/file/d/1jrV22Aozxz3LXRin_no_0hacvJgPO91P"
+                />
+            </div>
+        </ProjectSection>
 
+        <!-- Videos -->
+        <ProjectSection id="wvtaft-videos" sectionTitle="Videos">
 
+        </ProjectSection>
 
-        </section>
+        <!-- FAQ -->
+        <ProjectSection id="wvtaft-faq" sectionTitle="FAQ">
+            <div class="md:w-2/3" slot="sectionContent">
+                <h3 class="text-lg mb-3 font-light">¿What's the World Violation Tour project exactly?</h3>
+                <p class="mb-10">The "World Violation Tour - A fans tribute" is a fan project that recreates the iconic World Violation shows performed by Depeche Mode that took place at the Dodgers Stadium, Los Angeles, on August 4th and 5th, 1990. The goal is that you feel you're listening to an official and high quality live recording of that night.</p>
+                <h3 class="text-lg mb-3 font-light">So, it's not Depeche Mode then.</h3>
+                <p class="mb-10">No, you're not listening to any audience or soundboard recording. Everything was recreated from scratch. Original samples were used to recreate most of the synth lines, melodies and backing tracks.</p>
+                
+                <h3 class="text-lg mb-3 font-light">¿Were the vocals extracted/isolated from a sounboard?</h3>
+                <p class="mb-10">Believe it or not, the vocals you hear on every recording related to this project were recorded by Claudio Blanco, aka @perihelion54 on YouTube. No, it's not Dave.</p>
+                <h3 class="text-lg mb-3 font-light">¿How's this different from the WVT Remastered project you released on 2021?</h3>
+                <p class="mb-3">The World Violation Tour Remastered was the original name of this project. Since it often led to confusion, I decided to rename the whole thing.</p>
+                <p class="mb-10">But that's not the only difference. The overall sound of the project was improved, dramatically in some songs. Everything sounds sharper, louder and more dynamic than ever!</p>
+                <h3 class="text-lg mb-3 font-light">¿Do I have to buy the digital release again if I bought the first version?</h3>
+                <p class="mb-3">Short answer: no. For those who supported the original project by getting a copy of the digital release, you'll get the new version for free! Just send me a receipt of your Gumroad purchase to my email. That way I know you bought the WVT Remastered release and I'll happily send the new one for free!</p>
+                
+                <p class="mb-3">Please have in mind that this doesn't apply if you just downloaded the first version when it had no cost.</p>
+            </div>
+        </ProjectSection>
     </div>
 
 
