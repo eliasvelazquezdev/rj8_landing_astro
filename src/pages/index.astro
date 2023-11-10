@@ -5,6 +5,14 @@ import News from '../components/News.astro';
 import Form from '../components/Form.astro';
 import Arrow from '../components/Arrow.astro';
 const pageTitle = "Home";
+
+const channel_id = import.meta.env.CHANNEL_ID;
+const api_key = import.meta.env.API_KEY;
+
+
+const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channel_id}&maxResults=2&order=date&type=video&fields=items.id.videoId%2C%20items.snippet.title&key=${api_key}`);
+
+const videos = await response.json();
 ---
 
 <BaseLayout pageTitle={pageTitle}>
@@ -22,7 +30,7 @@ const pageTitle = "Home";
 
                 <p class="mb-3">On this site you can find access to all my social media and latest YouTube videos, find out what I'm working on, my upcoming content and more!</p>
                 
-                 <p class="mb-3">Feel free to contact me through the form below or hit me up on my social media. And oh, don't miss my awesome "A fans tribute" series, where I recreate some of the most iconic Depeche Mode live concerts. It's in the menu section, go feast your eyes!</p>
+                 <p class="mb-3">Feel free to contact me through the form on this page or hit me up on my social media. And oh, don't miss my awesome "A fans tribute" series, where I recreate some of the most iconic Depeche Mode live concerts. It's in the menu section, go feast your eyes (and ears)!</p>
             </div>
         </section>
 
@@ -33,19 +41,17 @@ const pageTitle = "Home";
             </h2>
 
             <div class="grid md:grid-cols-12 gap-4 mx-auto">
-                <div class="col-span-6">
-                    <h3 class="text-xl font-bold mb-3">
-                        My latest video
-                    </h3>
-                     <iframe class="mx-auto rounded-md w-full aspect-video" src="https://www.youtube.com/embed/Zqri5LWmYNI?si=SCvL1-l_PylTJjiM" frameborder="0"></iframe>
-                </div>
+                {
+                    
+                    videos.items.map((item) => (
+                        <div class="col-span-6">
+                            <h3 class="text-lg font-bold mb-3 md:truncate" set:html={item.snippet.title}> </h3>
 
-                <div class="col-span-6">
-                    <h3 class="text-xl font-bold mb-3">
-                        My latest live show
-                    </h3>
-                     <iframe class="mx-auto rounded-md w-full aspect-video" src="https://www.youtube.com/embed/Fv84C11skS4?si=LMJSlkHdZuqYPXeV" frameborder="0"></iframe>
-                </div>
+                        <iframe class="mx-auto rounded-md w-full aspect-video" src={`https://www.youtube.com/embed/${item.id.videoId}`} frameborder="0"></iframe>
+                    </div>
+                    ))
+                    
+                }
             </div>
         </section>
 
