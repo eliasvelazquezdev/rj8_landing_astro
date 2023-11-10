@@ -1,10 +1,15 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SpecialVideo from "../components/SpecialVideo.astro";
+import Arrow from '../components/Arrow.astro';
 
 const pageTitle = "Special Live Shows"
 ---
 <BaseLayout pageTitle={pageTitle}>
+    <div class="hidden lg:block w-full h-48">
+        <img class="w-full h-48 object-cover" src="https://res.cloudinary.com/daokfcdfm/image/upload/v1699588972/rj8_landing/minimoog_ejrbe4.jpg" alt="man playing keyboard">
+    </div>
+
     <div class="sm:ml-64 p-2 lg:p-6  bg-gradient-to-b from-zinc-800 to-zinc-900">
         <section id="specials-intro">
             <h2 class="text-3xl font-bold mb-3 bg-gradient-to-r from-yellow-500 via-red-500 to-orange-600 inline-block text-transparent bg-clip-text">
@@ -32,6 +37,38 @@ const pageTitle = "Special Live Shows"
                 specialTitle="Exotic Tour Instrumental - Second Show"
                 specialDescription="As the title says, this is the second performance of my homage to Depeche Mode's Exotic Tour. I like the setlist for this one a little bit better than the first live special. More than 2 hours of pure devotion. Do you have your candles at hand?"
             />
+
+            <SpecialVideo
+                specialURL="https://www.youtube.com/embed/0iyditEGimI?si=ZAv8QV-KuJMkGoOv"
+                specialTitle="101 - 35th Anniversary"
+                specialDescription="Grab your mic, it's time to sing! Imagine yourself there on stage with your friends on the keyboards. The iconic and legendary 101th concert of the Tour For The Masses is about to start! And yes, I streamed this on a June 18th."
+            />
+
+            <SpecialVideo
+                specialURL="https://www.youtube.com/embed/8-L-z_l4p8M?si=sd4JrG_FLZanb1EP"
+                specialTitle="Pet Shop Boys Anthology"
+                specialDescription="If you consider yourself a pethead or if you just like some PSB songs, you're gonna enjoy this. I play some of their most famous hits and some other songs (even B sides) that are part of my PSB favorites of all times."
+            />
+
+            <SpecialVideo
+                specialURL="https://www.youtube.com/embed/iNYw4dwVijI?si=mvxKd2GF8VHta40X"
+                specialTitle="Andrew Fletcher - In Your Memory"
+                specialDescription="I never thought I'd do a show like this one. You know, we humans refuse to believe that our heroes can and will die some day. But, memento mori. The important thing on this live event is that I show every single part Fletch played live on his keyboards for some of Depeche Mode's tours. Yes, he played things besides jumping and eating bananas on stage and I can prove it."
+            />
+
+            <SpecialVideo
+                specialURL="https://www.youtube.com/embed/DYyq8N7hFQk?si=XYxPNqc6YXt2ZlAa"
+                specialTitle="The B-Sides 81>90"
+                specialDescription="A nice collection of B-Sides from Speak & Spell to Violator. Do I have to say something else? Come on, start watching and enyojing!"
+            />
+
+            <SpecialVideo
+                specialURL="https://www.youtube.com/embed/aYqiOjG-PZ8?si=xccU_nbHtedb7add"
+                specialTitle="A Broken Frame - Live at Hammersmith Odeon"
+                specialDescription="Hope you have time for this one! Almost 4 (yes, FOUR) hours of music and chit chat. First, the entire A Broken Frame as it was performed at the Hammermith Odeon and a amazing after show playing the requests on the chat section."
+            />
         </section>
+
+        <Arrow />
     </div>
 </BaseLayout>
