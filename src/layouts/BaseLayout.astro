@@ -2,6 +2,17 @@
 import { ViewTransitions } from 'astro:transitions';
 import Sidebar from '../components/Sidebar.astro';
 const {pageTitle} = Astro.props;
+
+import { getImage } from 'astro:assets';
+import faviconSrc from '../images/favicon.png';
+
+const appleTouchIcon = await getImage({
+  src: faviconSrc,
+  width: 180,
+  height: 180,
+  format: 'png'
+})
+
 ---
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
@@ -12,6 +23,7 @@ const {pageTitle} = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<!-- Font Awesome -->
 		<script src="https://kit.fontawesome.com/8ddddc79a5.js" crossorigin="anonymous"></script>
+		<!-- Google Fonts -->
 		<style>
 			@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,700&display=swap');
 
@@ -19,6 +31,17 @@ const {pageTitle} = Astro.props;
 				font-family: 'Roboto Mono', monospace;
 			}
 		</style>
+		<!-- Favicon -->
+		<link rel="icon" type="image/x-icon" href="../images/favicon.ico" sizes="32x32">
+    	<link rel="apple-touch-icon" href={appleTouchIcon.src}/>
+		<link rel="manifest" href="/manifest.json" />
+		<!-- Thumbnail -->
+		<meta property='og:title' content='RJ8 - Music Productions'/>
+		<meta property='og:image' content='https://res.cloudinary.com/daokfcdfm/image/upload/v1699885736/rj8_landing/Thumbnail_hncedy.png'/>
+		<meta property='og:description' content="Instrumental recreations - Covers - Live events & more!"/>
+		<meta property='og:url' content='https://rj8mp.com/'/>
+		<meta property='og:image:width' content='1200' />
+		<meta property='og:image:height' content='627' />
 		<title>{pageTitle} - RJ8</title>
 		<!-- <ViewTransitions /> -->
 	</head>

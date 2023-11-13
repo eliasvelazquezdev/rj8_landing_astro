@@ -43,12 +43,12 @@ const videos = await response.json();
             <div class="grid md:grid-cols-12 gap-4 mx-auto">
                 {
                     
-                    videos.items.map((item) => (
+                    videos.items?.map((item) => (
                         <div class="col-span-6">
                             <h3 class="text-lg font-bold mb-3 md:truncate" set:html={item.snippet.title}> </h3>
 
-                        <iframe class="mx-auto rounded-md w-full aspect-video" src={`https://www.youtube.com/embed/${item.id.videoId}`} frameborder="0"></iframe>
-                    </div>
+                            <iframe class="mx-auto rounded-md w-full aspect-video" src={`https://www.youtube.com/embed/${item.id.videoId}`} frameborder="0"></iframe>
+                        </div>
                     ))
                     
                 }
