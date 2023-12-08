@@ -3,22 +3,11 @@ import { ViewTransitions } from 'astro:transitions';
 import Sidebar from '../components/Sidebar.astro';
 const {pageTitle} = Astro.props;
 
-import { getImage } from 'astro:assets';
-import faviconSrc from '../images/favicon.png';
-
-const appleTouchIcon = await getImage({
-  src: faviconSrc,
-  width: 180,
-  height: 180,
-  format: 'png'
-})
-
 ---
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<!-- Font Awesome -->
@@ -32,8 +21,7 @@ const appleTouchIcon = await getImage({
 			}
 		</style>
 		<!-- Favicon -->
-		<link rel="icon" type="image/x-icon" href="../images/favicon.ico" sizes="32x32">
-    	<link rel="apple-touch-icon" href={appleTouchIcon.src}/>
+		<link rel="shorcut icon" type="image/x-icon" href="https://res.cloudinary.com/daokfcdfm/image/upload/v1699655012/rj8_landing/favicon_gdotcm.ico?v=2" sizes="32x32">
 		<link rel="manifest" href="/manifest.json" />
 		<!-- Thumbnail -->
 		<meta property='og:title' content='RJ8 - Music Productions'/>
