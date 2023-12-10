@@ -13,12 +13,23 @@ const {pageTitle} = Astro.props;
 		<!-- Font Awesome -->
 		<script src="https://kit.fontawesome.com/8ddddc79a5.js" crossorigin="anonymous"></script>
 		<!-- Google Fonts -->
-		<style>
+		<style is:global>
 			@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,700;1,200;1,300;1,400;1,700&display=swap');
 
 			body{
 				font-family: 'Roboto Mono', monospace;
 			}
+
+			::-webkit-scrollbar {
+    			width: 6px;
+  			}
+  			::-webkit-scrollbar-track {
+    			background: #1f2937;
+  			}
+  			::-webkit-scrollbar-thumb {
+    			background: linear-gradient(135deg, #d0030c, #df7800, #b4ae00);
+    			border-radius: 6px;
+  			}
 		</style>
 		<!-- Favicon -->
 		<link rel="shorcut icon" type="image/x-icon" href="https://res.cloudinary.com/daokfcdfm/image/upload/v1699655012/rj8_landing/favicon_gdotcm.ico?v=2" sizes="32x32">
