@@ -15,24 +15,29 @@ const api_key = import.meta.env.API_KEY;
 const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channel_id}&maxResults=2&order=date&type=video&fields=items.id.videoId%2C%20items.snippet.title&key=${api_key}`);
 
 const videos = await response.json();
+
+
+let colStart = 0;
+let colEnd = 4;
 ---
 
 <BaseLayout pageTitle={pageTitle}>
     <div class="sm:ml-64 text-center">
         <!-- Welcome section -->
-        <section id="welcome" class="bg-zinc-800 p-2 lg:p-6">
+        <section id="welcome" class="bg-zinc-800 p-2 lg:p-12 xl:flex xl:items-center xl:justify-center">
             <img class="mx-auto block w-96" src="https://res.cloudinary.com/daokfcdfm/image/upload/v1699326892/rj8_landing/RJ8_23_CircleFrame_fjt95a.png" alt="rj8's logo">
 
-            <h2 class="text-3xl font-bold mb-3 bg-gradient-to-r from-yellow-500 via-red-500 to-orange-600 inline-block text-transparent bg-clip-text">
-                Welcome to my site!
-            </h2>
+            <div class="xl:w-2/3">
+                <h2 class="text-3xl font-bold mb-3 bg-gradient-to-r from-yellow-500 via-red-500 to-orange-600 inline-block text-transparent bg-clip-text">
+                    Welcome to my site!
+                </h2>
 
-            <div class="md:w-2/3 mx-auto">
-                <p class="mb-3">Hey party people! I'm RJ8, the musical maestro from Buenos Aires, Argentina. I'm all about that groovy vintage vibe, crafting tunes with synths and drum machines. You can catch me jamming out covers and instrumental renditions on YouTube.</p>
-
-                <p class="mb-3">On this site you can find access to all my social media and latest YouTube videos, find out what I'm working on, my upcoming content and more!</p>
+                <div class="md:w-2/3 xl:w-1/2 mx-auto">
+                    <p class="mb-3">Hey party people! I'm RJ8, the musical maestro from Buenos Aires, Argentina. I'm all about that groovy vintage vibe, crafting tunes with synths and drum machines. You can catch me jamming out covers and instrumental renditions on YouTube.</p>
+                    <p class="mb-3">On this site you can find access to all my social media and latest YouTube videos, find out what I'm working on, my upcoming content and more!</p>
                 
-                 <p class="mb-3">Feel free to contact me through the form on this page or hit me up on my social media. And oh, don't miss my awesome "A fans tribute" series, where I recreate some of the most iconic Depeche Mode live concerts. It's in the menu section, go feast your eyes (and ears)!</p>
+                     <p class="mb-3">Feel free to contact me through the form on this page or hit me up on my social media. And oh, don't miss my awesome "A fans tribute" series, where I recreate some of the most iconic Depeche Mode live concerts. It's in the menu section, go feast your eyes (and ears)!</p>
+                </div>
             </div>
         </section>
 
@@ -42,11 +47,11 @@ const videos = await response.json();
                 What's new on my channel
             </h2>
 
-            <div class="grid md:grid-cols-12 gap-4 mx-auto">
+            <div class="grid md:grid-cols-12 gap-6">
                 {
                     
                     videos.items?.map((item) => (
-                        <div class="col-span-6">
+                    <div class={`col-span-4 col-start-${colStart + 2} col-end-${colEnd + 2}`}>
                             <h3 class="text-lg font-bold mb-3 md:truncate" set:html={item.snippet.title}> </h3>
 
                             <iframe class="mx-auto rounded-md w-full aspect-video" src={`https://www.youtube.com/embed/${item.id.videoId}`} frameborder="0"></iframe>
